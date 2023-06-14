@@ -684,6 +684,21 @@
                                         </div>
                                       </div>
                                       <div class="card-footer">
+                                        <script>
+                                          function exibirQuantidade() {
+                                              var componentes = document.getElementsByName("componente");
+                                  
+                                              var resultado = "";
+                                              for (var i = 0; i < componentes.length; i++) {
+                                                  if (componentes[i].checked) {
+                                                      var quantidade = document.getElementById("quantidade-" + componentes[i].value).value;
+                                                      resultado += componentes[i].value + ": " + quantidade + "<br>";
+                                                  }
+                                              }
+                                  
+                                              document.getElementById("resultado").innerHTML = resultado;
+                                          }
+                                      </script>
                                        <div class="widget">
                                            <h1>Caixa para selecionar a quantidade de componentes, nós, ramos, malhas e tipo de circuito</h1>
                                            
@@ -718,7 +733,11 @@
                                               <input type="checkbox" name="componente" value=" Simulador AC">  Simulador AC
                                                   <input type="number" id="quantidade- Simulador AC" min="0"><br>  
                                               <input type="checkbox" name="componente" value="Simulador DC"> Simulador DC
-                                                  <input type="number" id="quantidade-Simulador DC" min="0"><br>  
+                                                  <input type="number" id="quantidade-Simulador DC" min="0"><br> 
+
+                                                      <input type="button" value="Exibir Quantidade" onclick="exibirQuantidade()">
+                                                      <h3>Quantidade de Componentes Selecionados:</h3>
+                                                      <div id="resultado"></div> 
                                              </fieldset>
                                           
                                            
@@ -736,7 +755,7 @@
                                               <label for="checkbox-5">4 Nós</label>
                                               <input type="checkbox" name="checkbox-5" id="checkbox-5">
                                               <label for="checkbox-6">Outras quantidades</label>
-                                              <input type="number" name="checkbox-6" id="quantidade-Outros" min="0"><br> 
+                                              <input type="number" id="quantidade-Outros" min="0"><br> 
                                             </fieldset>
                                            
                                             <h2>Selecione</h2>
