@@ -769,7 +769,8 @@
                                           }
                                   </script>
                                    <h1>Caixa para selecionar a quantidade de componentes, nós, ramos, malhas e tipo de circuito</h1>
-                                    <div class="col-sm-5">        
+                                    <div class="col-sm-5"> 
+                                      <div class="card-footer">       
                                           <h2>Selecione</h2>
                                             <fieldset>
                                               <legend>Componente e quantidade: </legend>
@@ -804,12 +805,11 @@
                                               <input type="checkbox" name="componente" value="Simulador DC"> Simulador DC
                                                   <input type="number" id="quantidade-Simulador DC" min="0" style="width: 8%; background-color: #d7b01d"><br> 
 
-                                                  <input type="button" value="Exibir Quantidade" onclick="exibirQuantidade()">
-                                                    <h3>Quantidade de Componentes Selecionados:</h3>
-                                                  <div id="resultado" style="width: 18%; background-color: #d7b01d"></div> 
-                                             </fieldset>
+                                            </fieldset>
+                                            </div>
                                   </div>  
-                                  <div class="col-sm-7">                                     
+                                  <div class="col-sm-7">  
+                                    <div class="card-footer">                                   
                                         <h2>Selecione</h2>
                                             <fieldset>
                                               <legend>Quantidade de nós: </legend>
@@ -868,13 +868,19 @@
                                               <input type="checkbox" name="checkbox-1" id="checkbox-1">
                                               <label for="checkbox-2">DC</label>
                                               <input type="checkbox" name="checkbox-2" id="checkbox-2">
-                                               </fieldset>
+                                           </fieldset>
                                       </div>
-                                         <div class="card-footer">
-                                          <small class="text-muted"><span data-translate="_lastUpdated"></span><span> Oct 5 2020.</span></small>
-                                         </div>
-                                    </div>
-                                 </div>
+                                      </div>
+                                     <div class="card-footer">
+                                          <input type="button" value="Exibir Quantidade" onclick="exibirQuantidade()">
+                                              <h3>Quantidade de Componentes Selecionados:</h3>
+                                      <div id="resultado" style="width: auto; background-color: #d7b01d"></div> 
+                                      </div>
+                                   </div>
+                                <div class="card-footer">
+                                     <small class="text-muted"><span data-translate="_lastUpdated"></span><span> Oct 5 2020.</span></small>
+                               </div>
+                               </div>
                            </div>
             </section>
 
