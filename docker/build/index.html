@@ -769,14 +769,13 @@
                                           }
                                   </script>
                                   <div class="card-footer">
-                                   <h1>Caixa para selecionar componentes, nós, ramos, malhas e tipo de circuito</h1>
+                                   <h1>Caixa para selecionar a quantidade de componentes, nós, ramos, malhas e tipo de circuito</h1>
                                    </div> 
                                    <div class="col-sm-5"> 
                                       <div class="card-footer">       
-                                          <h2>Selecione</h2>
+                                          <h2>Componentes:</h2>
                                             <fieldset>
-                                              <legend>Componente e quantidade: </legend>
-                                              <form>
+                                             <legend>
                                               <input type="checkbox" name="componente" value="Resistência"> Resistencia
                                                   <input type="number" id="quantidade-Resistência" min="0" style="width: 8%; background-color: #d7b01d"><br>
                                               <input type="checkbox" name="componente" value="Condensador"> Condensador
@@ -805,62 +804,36 @@
                                                   <input type="number" id="quantidade- Simulador AC" min="0" style="width: 8%; background-color: #d7b01d"><br>  
                                               <input type="checkbox" name="componente" value="Simulador DC"> Simulador DC
                                                   <input type="number" id="quantidade-Simulador DC" min="0" style="width: 8%; background-color: #d7b01d"><br> 
-                                            </fieldset>
+                                                </legend> 
+                                                </fieldset>
                                       </div>
                                    </div>  
                                    <div class="col-sm-7">  
                                     <div class="card-footer">                                   
                                         <h2>Selecione</h2>
                                             <fieldset>
-                                              <legend>Quantidade de nós: </legend>
-                                              <label for="checkbox-1">0 Nó</label>
-                                              <input type="checkbox" name="checkbox-1" id="checkbox-1">
-                                              <label for="checkbox-2">1 Nó</label>
-                                              <input type="checkbox" name="checkbox-2" id="checkbox-2">
-                                              <label for="checkbox-3">2 Nós</label>
-                                              <input type="checkbox" name="checkbox-3" id="checkbox-3">
-                                              <label for="checkbox-4">3 Nós</label>
-                                              <input type="checkbox" name="checkbox-4" id="checkbox-4">
-                                              <label for="checkbox-5">4 Nós</label>
-                                              <input type="checkbox" name="checkbox-5" id="checkbox-5">
-                                              <label for="checkbox-6">Outras quantidades</label>
-                                              <input type="number" id="quantidade-Outros" min="0" style="width: 8%; background-color: #d7b01d"><br> 
+                                              <legend>
+                                                <input type="checkbox" name="nós" value="Quantidade de nós"> Quantidade de nós
+                                                    <input type="number" id="Quantidade de nós" min="0" style="width: 8%; background-color: #d7b01d"><br> 
+                                              </legend>
                                             </fieldset>
                                        <h2>Selecione</h2>
                                             <fieldset>
-                                              <legend>Quantidade de ramos: </legend>
-                                              <label for="checkbox-1">2 Ramos</label>
-                                              <input type="checkbox" name="checkbox-1" id="checkbox-1">
-                                              <label for="checkbox-2">3 Ramos</label>
-                                              <input type="checkbox" name="checkbox-2" id="checkbox-2">
-                                              <label for="checkbox-3">4 Ramos</label>
-                                              <input type="checkbox" name="checkbox-3" id="checkbox-3">
-                                              <label for="checkbox-4">5 Ramos</label>
-                                              <input type="checkbox" name="checkbox-4" id="checkbox-4">
-                                              <label for="checkbox-5">6 Ramos</label>
-                                              <input type="checkbox" name="checkbox-5" id="checkbox-5">
-                                              <label for="checkbox-6">Outras quantidades</label>
-                                              <input type="number" id="quantidade-Outros" min="2" style="width: 8%; background-color: #d7b01d"><br> 
+                                              <legend>   
+                                                <input type="checkbox" name="ramos" value="Quantidade de ramos"> Quantidade de ramos
+                                                    <input type="number" id="Quantidade de ramos" min="2" style="width: 8%; background-color: #d7b01d"><br> 
+                                              </legend>
                                             </fieldset>
                                        <h2>Selecione</h2>
                                             <fieldset>
-                                              <legend>Quantidade de malhas: </legend>
-                                              <label for="checkbox-1">1 Malhas</label>
-                                              <input type="checkbox" name="checkbox-1" id="checkbox-1">
-                                              <label for="checkbox-2">2 Malhas</label>
-                                              <input type="checkbox" name="checkbox-2" id="checkbox-2">
-                                              <label for="checkbox-3">3 Malhas</label>
-                                              <input type="checkbox" name="checkbox-3" id="checkbox-3">
-                                              <label for="checkbox-4">4 Malhas</label>
-                                              <input type="checkbox" name="checkbox-4" id="checkbox-4">
-                                              <label for="checkbox-5">5 Malhas</label>
-                                              <input type="checkbox" name="checkbox-5" id="checkbox-5">
-                                              <label for="checkbox-6">Outras quantidades</label>
-                                              <input type="number" id="quantidade-Outros" min="1" style="width: 8%; background-color: #d7b01d"><br> 
+                                              <legend>
+                                                <input type="checkbox" name="malhas" value="Quantidade de malhas"> Quantidade de malhas
+                                                <input type="number" id="Quantidade de malhas" min="1" style="width: 8%; background-color: #d7b01d"><br> 
+                                              </legend>
                                             </fieldset>
                                        <h2>Selecione</h2>
                                             <fieldset>
-                                              <legend>Tipo de circuto: </legend>
+                                              <legend>Tipo de circuito: </legend>
                                               <label for="checkbox-1">AC</label>
                                               <input type="checkbox" name="checkbox-1" id="checkbox-1">
                                               <label for="checkbox-2">DC</label>
