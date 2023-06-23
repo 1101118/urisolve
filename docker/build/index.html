@@ -797,9 +797,9 @@
                                             <input type="checkbox" name="informação" value="Mosfet"> Mosfet
                                                 <input type="number" id="informação-Mosfet" min="0" style="width: 8%; background-color: #d7b01d"><br>  
                                             <input type="checkbox" name="informação" value=" OpAmp">  OpAmp
-                                                <input type="number" id="informaçãoe- OpAmp" min="0" style="width: 8%;background-color: #d7b01d"><br>  
+                                                <input type="number" id="informação- OpAmp" min="0" style="width: 8%;background-color: #d7b01d"><br>  
                                             <input type="checkbox" name="informação" value="Thyristor"> Thyristor
-                                                <input type="number" id="quantidade-Thyristor" min="0" style="width: 8%; background-color: #d7b01d"><br>  
+                                                <input type="number" id="informação-Thyristor" min="0" style="width: 8%; background-color: #d7b01d"><br>  
                                             <input type="checkbox" name="informação" value=" Simulador AC">  Simulador AC
                                                 <input type="number" id="informação- Simulador AC" min="0" style="width: 8%; background-color: #d7b01d"><br>  
                                             <input type="checkbox" name="informação" value="Simulador DC"> Simulador DC
@@ -833,6 +833,22 @@
                                     </div>   
                                   </div>
                                   <script>
+                                    function exibirCircuito() {
+                                        var resultado = document.getElementsByName("circuito");
+                                         var informaçãoResistência = "";
+                                         var informaçãoCondensador = "";
+                                         var informaçãoInductor = "";
+                                         var informaçãoMassa = "";
+                                            for (var i = 0; i < resultado.length; i++) {
+                                                if (resultado[i].checked) {
+                                                    var circuito = document.getElementById("circuito-" + resultado[i].value).value;
+                                                    resultado += resultado[i].value + ": " + informação + "<br>";
+                                                }
+                                            }
+                                           document.getElementById("resultado").innerHTML = resultado;
+                                        }
+                                </script>
+                                  <script>
                                         function verificarResultado() {
                                         var numResistencias = "";
                                         var numCondensadores = "";
@@ -840,17 +856,16 @@
                                         if (numResistencias === 6 && numCondensadores === "" && numNos === "") {
                                             document.getElementById('imagem1').classList.remove('hidden');
                                         }
-                                        else if(numResistencias === 7 && numCondensadores === "" && numNos === "") {
-                                            document.getElementById('imagem2').classList.remove('hidden');
-                                        }
+                                       
                                     }
                                 </script>
                                 <body>
                                   <h1>Circuito:</h1>
-                                  <img class="card-img img-max-ex" src="img/examples/dcLevel1.png">
+                                  document.write('<img class="card-img img-max-ex" src="img/examples/dcLevel1.png">');
                                   <img class="card-img img-max-ex" src="img/examples/dcLevel2.png">
                                   </body>
                                 </div>
+
                              </div>
                                  <div class="card-footer">
                                    <small class="text-muted"><span data-translate="_lastUpdated"></span><span> Jun 22 2023.</span></small>
