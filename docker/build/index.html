@@ -842,24 +842,13 @@
                                             for (var i = 0; i < resultado.length; i++) {
                                                 if (resultado[i].checked) {
                                                     var circuito = document.getElementById("circuito-" + resultado[i].value).value;
-                                                    resultado += resultado[i].value + ": " + informação + "<br>";
+                                                    informação += resultado[i].value + ": " + circuito + "<br>";
                                                 }
                                             }
-                                           document.getElementById("resultado").innerHTML = resultado;
+                                           document.getElementById("informação").innerHTML = informação;
                                         }
                                 </script>
-                                  <script>
-                                        function verificarResultado() {
-                                        var numResistencias = "";
-                                        var numCondensadores = "";
-                                        var numNos = "";
-                                        if (numResistencias === 6 && numCondensadores === "" && numNos === "") {
-                                            document.getElementById('imagem1').classList.remove('hidden');
-                                        }
-                                       
-                                    }
-                                </script>
-                                <body>
+                                                           <body>
                                   <h1>Circuito:</h1>
                                   document.write('<img class="card-img img-max-ex" src="img/examples/dcLevel1.png">');
                                   <img class="card-img img-max-ex" src="img/examples/dcLevel2.png">
