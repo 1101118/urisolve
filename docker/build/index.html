@@ -834,23 +834,22 @@
                                   </div>
                                   <script>
                                     function exibirCircuito() {
-                                        var resultado = document.getElementsByName("circuito");
+                                        var informação = document.getElementsByName("circuito");
                                          var informaçãoResistência = "";
                                          var informaçãoCondensador = "";
                                          var informaçãoInductor = "";
                                          var informaçãoMassa = "";
-                                            for (var i = 0; i < resultado.length; i++) {
-                                                if (resultado[i].checked) {
-                                                    var circuito = document.getElementById("circuito-" + resultado[i].value).value;
-                                                    informação += resultado[i].value + ": " + circuito + "<br>";
-                                                }
-                                            }
-                                           document.getElementById("informação").innerHTML = informação;
+                                  
+                                        if (informaçãoResistencia === "" && informaçãoCondensador === "" && informaçãoInductor === "" && informaçãoMassa) {
+                                            document.getElementById("circuito").innerHTML= circuito;
                                         }
+                                       
+                                    }
                                 </script>
-                                                           <body>
+                                <body>
                                   <h1>Circuito:</h1>
-                                  document.write('<img class="card-img img-max-ex" src="img/examples/dcLevel1.png">');
+                                
+                                  <img class="card-img img-max-ex" src="img/examples/dcLevel1.png">;
                                   <img class="card-img img-max-ex" src="img/examples/dcLevel2.png">
                                   </body>
                                 </div>
