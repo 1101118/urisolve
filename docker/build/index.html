@@ -755,7 +755,7 @@
                                </div>
                               </div>
                               <div class="row no-gutters">
-                                 <script>
+                                <script>
                                     function exibirInformação() {
                                         var componentes = document.getElementsByName("informação");
                                          var resultado = "";
@@ -770,7 +770,7 @@
                                 </script>
                                 <div class="card-footer">
                                  <h1>Caixa para selecionar a quantidade de componentes, nós, ramos, malhas e tipo de circuito</h1>
-                                 </div> 
+                                </div> 
                                  <div class="col-sm-5"> 
                                     <div class="card-footer">       
                                         <h2>Quantidade de Componentes:</h2>
@@ -827,33 +827,32 @@
                                             </legend>
                                           </fieldset>
                                     <div class="card-footer">
-                                            <input type="button" value="Exibir Informação" onclick="exibirInformação()">
-                                                <h3>Quantidade de componentes e circuito selecionados:</h3>
+                                        <input type="button" value="Exibir Informação" onclick="exibirInformação()">
+                                            <h3>Quantidade de componentes e circuito selecionados:</h3>
                                         <div id="resultado" style="width: auto; background-color: #d7b01d"></div> 
                                     </div>   
                                   </div>
-                                  <script>
+                                   <script>
                                     function exibirCircuito() {
-                                        var informação = document.getElementsByName("circuito");
+                                        var resultado = document.getElementsByName("circuito");
                                          var informaçãoResistência = "";
                                          var informaçãoCondensador = "";
                                          var informaçãoInductor = "";
                                          var informaçãoMassa = "";
                                   
-                                        if (informaçãoResistencia === "" && informaçãoCondensador === "" && informaçãoInductor === "" && informaçãoMassa) {
-                                            document.getElementById("circuito").innerHTML= circuito;
-                                        }
-                                       
-                                    }
-                                </script>
-                                <body>
-                                  <h1>Circuito:</h1>
-                                
-                                  <img class="card-img img-max-ex" src="img/examples/dcLevel1.png">;
-                                  <img class="card-img img-max-ex" src="img/examples/dcLevel2.png">
-                                  </body>
-                                </div>
-
+                                        if (informaçãoResistência === "" && informaçãoCondensador === "" && informaçãoInductor === "" && informaçãoMassa) {
+                                           document.getElementById("resultado").innerHTML = circuito; 
+                                          }
+                                        
+                                            document.getElementById("circuito").innerHTML= circuito('<img class= "card-img img-max-ex" src="img/examples/dcLevel1.png">');
+                                      }
+                                   </script>
+                                   <div class="card-footer">
+                                        <input type="button" value="Exibir Circuito" onclick="exibirCircuito()">
+                                            <h3>Circuito:</h3>
+                                        <div id="circuito" style="width: auto; background-color: #d7b01d"></div> 
+                                    </div>   
+                                 </div>
                              </div>
                                  <div class="card-footer">
                                    <small class="text-muted"><span data-translate="_lastUpdated"></span><span> Jun 22 2023.</span></small>
