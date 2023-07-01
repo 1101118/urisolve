@@ -832,26 +832,59 @@
                                         <div id="resultado" style="width: auto; background-color: #d7b01d"></div> 
                                     </div>   
                                   </div>
-                                   <script>
-                                    function exibirCircuito() {
-                                        var resultado = document.getElementsByName("circuito");
-                                         var informaçãoResistência = "";
-                                         var informaçãoCondensador = "";
-                                         var informaçãoInductor = "";
-                                         var informaçãoMassa = "";
-                                  
-                                        if (informaçãoResistência === "" && informaçãoCondensador === "" && informaçãoInductor === "" && informaçãoMassa) {
-                                           document.getElementById("resultado").innerHTML = circuito; 
+                                  <head>
+                                  <body>
+                                    <h1>Circuito Elétrico</h1>
+                                    <input type="button" value="Exibir Circuito" onclick="exibirCircuito()">
+                                            
+                                    <!-- Aqui está a imagem do circuito elétrico -->
+                                    <div id="Circuito" img src="img/examples/dcLevel1.png" alt="Circuito Elétrico"></div>
+                                    <script>
+                                      function exibirCircuito() {
+                                          var circuito = document.getElementsByName("resultado");
+                                           var informaçãoResistência = "";
+                                           var informaçãoCondensador = "";
+                                            if (informaçãoResistência === 6 && informaçãoCondensador === 2) {
+                                              var circuito = document.getElementById("resultado")<br>"                                                }
+                                              }
+                                              {
+                                              document.querySelector('img').style.display = 'circuito';
                                           }
-                                        
-                                            document.getElementById("circuito").innerHTML= circuito('<img class= "card-img img-max-ex" src="img/examples/dcLevel1.png">');
+                                  </script>
+                                    <script>
+                                      // Verificar o resultado
+                                      var circuito = document.getElementsByName("informação");
+                                      var informaçãoResistência = 6;
+                                      var informaçãoCondensador = 2;
+                                      
+                                      if (informaçãoResistência === 6 && informaçãoCondensador === 2) {
+                                        // Exibir a imagem se o resultado for igual a seis resistências e cinco condensadores
+                                        document.querySelector('img').style.display = 'circuito';
+                                      } else {
+                                        // Ocultar a imagem caso contrário
+                                        document.querySelector('img').style.display = 'circuito';
                                       }
+                                    </script>
+                                  </body>
+                                  </head>
+                <script>
+                    function exibirCircuito() {
+                      var resultado = 
+                        informaçãoResistência = "";
+                        informaçãoCondensador = "";
+                        informaçãoInductor = "";
+                        informaçãoMassa = "";
+                          if (informaçãoResistência === 6 && informaçãoCondensador === "" && informaçãoInductor === "" && informaçãoMassa) {
+                              document.querySelector('img1').style.display = 'block';}
+                          else {
+                                 // Ocultar a imagem caso contrário
+                              document.querySelector('img').style.display = 'none'; }
                                    </script>
-                                   <div class="card-footer">
-                                        <input type="button" value="Exibir Circuito" onclick="exibirCircuito()">
-                                            <h3>Circuito:</h3>
-                                        <div id="circuito" style="width: auto; background-color: #d7b01d"></div> 
-                                    </div>   
+                <div class="card-footer">
+                    <h1>Circuito Elétrico</h1>
+                        <!-- Aqui está a imagem do circuito elétrico -->
+                        <img1 src="img/examples/dcLevel1.png" alt="Circuito Elétrico">
+                </div>   
                                  </div>
                              </div>
                                  <div class="card-footer">
