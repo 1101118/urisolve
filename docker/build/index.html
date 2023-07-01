@@ -832,14 +832,13 @@
                                         <div id="resultado" style="width: auto; background-color: #d7b01d"></div> 
                                     </div>   
                                   </div>
-                                  <head>
-                                  <body>
-                                    <h1>Circuito Elétrico</h1>
-                                    <input type="button" value="Exibir Circuito" onclick="exibirCircuito()">
-                                            
-                                    <!-- Aqui está a imagem do circuito elétrico -->
-                                    <div id="Circuito" img src="img/examples/dcLevel1.png" alt="Circuito Elétrico"></div>
-                                    <script>
+                                    <div class="card-footer">
+                                        <h1>Circuito Elétrico</h1>
+                                          <input type="button" value="Exibir Circuito" onclick="exibirCircuito()">
+                                             <!-- Aqui está a imagem do circuito elétrico -->
+                                          <div id="Circuito" img src="img/examples/dcLevel1.png" alt="Circuito Elétrico"></div>
+                                    </div>
+                                  <script>
                                       function exibirCircuito() {
                                           var circuito = document.getElementsById("resultado");
                                            var informaçãoResistência = "";
@@ -851,13 +850,10 @@
                                               document.querySelector('img').style.display = 'circuito';
                                           }
                                   </script>
-                                  
-                                  </body>
-                                  </head>
                                  </div>
-                                 <div class="card-footer">
-                                   <small class="text-muted"><span data-translate="_lastUpdated"></span><span> Jun 22 2023.</span></small>
-                                 </div>
+                                   <div class="card-footer">
+                                     <small class="text-muted"><span data-translate="_lastUpdated"></span><span> Jun 22 2023.</span></small>
+                                   </div>
                             </div>
                          </div>
           </section>
