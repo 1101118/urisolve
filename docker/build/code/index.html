@@ -765,6 +765,36 @@
                             </div>
                          </div>
                </div>
+         
+<head>
+  <title>Desenho de Circuito Elétrico</title>
+  <style>
+    #circuit-container {
+      width: 500px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div id="circuit-container"></div>
+
+  <script src="https://unpkg.com/circuitjs"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      var container = document.getElementById("circuit-container");
+      var circuit = new Circuit(container);
+      
+      // Adicione os componentes elétricos ao circuito
+      circuit.addComponent(new Resistor(100, 100, 200, 100));
+      circuit.addComponent(new Battery(100, 200, 200, 200));
+      circuit.addComponent(new Wire(200, 100, 200, 200));
+      
+      // Renderize o circuito
+      circuit.draw();
+    });
+  </script>
+</body>
+
            </section>
      <!-- CONTACT US
         ================-->
