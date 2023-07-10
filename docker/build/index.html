@@ -76,7 +76,8 @@
     <script type="text/javascript" src="js/contact-form.js"></script>
     <script type="text/javascript" src="js/login-register.js"></script>
     <script type="text/javascript" src="js/publications.js"></script>
-
+    <script type="text/javascript" src="js/qucs.js"></script>
+                    
     <script type="text/javascript">
     // Global Arrays
     fileContents = new Array(2);
@@ -739,9 +740,9 @@
                                               <input type="checkbox" name="informação" value="Nós"> Nós
                                                 <input type="number" id="informação-Nós" min="0" style="width: 10%; background-color: #d7b01d"><br> 
                                               <input type="checkbox" name="informação" value="Ramos"> Ramos
-                                                <input type="number" id="informação-Ramos" min="2" style="width: 10%; background-color: #d7b01d"><br> 
+                                                <input type="number" id="informação-Ramos" min="1" style="width: 10%; background-color: #d7b01d"><br> 
                                               <input type="checkbox" name="informação" value="Malhas"> Malhas
-                                                <input type="number" id="informação-Malhas" min="1" style="width: 10%; background-color: #d46676"><br> 
+                                                <input type="number" id="informação-Malhas" min="1" style="width: 10%; background-color:  #d7b01d"><br> 
                                               <input type="checkbox" name="informação" value="Tipo AC"> Tipo AC
                                                 <input id="informação-Tipo AC"><br> 
                                               <input type="checkbox" name="informação" value="Tipo DC"> Tipo DC 
@@ -759,15 +760,40 @@
                                       </div>   
                                    </div>
                                    </div>
-                                   <div class="card-footer">
-                                    <img class="card-qucs img-max-ex" img src="cirgen/qucs.bat">
-                                </div>
                                     <div class="card-footer">
                                      <small class="text-muted"><span data-translate="_lastUpdated"></span><span> Jun 22 2023.</span></small>
                                     </div>
                             </div>
                          </div>
                    </div>
+                   <div>
+                     <circuito id="circuito" width="800" height="600"></circuito>
+                      <script>
+                        var qucs = new Qucs();
+                        
+                        // Defina o número de malhas e ramos
+                        var informaçãoMalhas = 1;
+                        var informaçãoRamos = 1;
+                        
+                        // Crie o esquemático com base na quantidade de malhas e ramos
+                        for (var i = 0; i < informaçãoMalhas; i++) {
+                          qucs.addComponent(new Qucs.ResistorComponent(i * 100, 100, 100, 100));
+                        }
+                        
+                        for (var j = 0; j < informaçãoRamos; j++) {
+                          qucs.addComponent(new Qucs.InductorComponent(j * 100, 200, 100, 100));
+                        }
+                        
+                        //O esquemático
+                        qucs.render("circuito");
+                      </script>
+                      <div class="card-footer">
+                        <input type="button" value="Exibir Circuito" onclick="exibirCircuito()">
+                                           
+                        <h3>Circuito:</h3>
+                        <div id="circuito" style="width: auto; background-color: #d7b01d"></div> 
+                      </div> 
+                      </div>
            </section>
      <!-- CONTACT US
         ================-->
