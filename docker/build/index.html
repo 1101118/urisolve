@@ -766,34 +766,7 @@
                             </div>
                          </div>
                    </div>
-                   <div>
-                     <circuito id="circuito" width="800" height="600"></circuito>
-                      <script>
-                        var qucs = new Qucs();
-                        
-                        // Defina o número de malhas e ramos
-                        var informaçãoMalhas = 1;
-                        var informaçãoRamos = 1;
-                        
-                        // Crie o esquemático com base na quantidade de malhas e ramos
-                        for (var i = 0; i < informaçãoMalhas; i++) {
-                          qucs.addComponent(new Qucs.ResistorComponent(i * 100, 100, 100, 100));
-                        }
-                        
-                        for (var j = 0; j < informaçãoRamos; j++) {
-                          qucs.addComponent(new Qucs.InductorComponent(j * 100, 200, 100, 100));
-                        }
-                        
-                        //O esquemático
-                        qucs.render("circuito");
-                      </script>
-                      <div class="card-footer">
-                        <input type="button" value="Exibir Circuito" onclick="exibirCircuito()">
-                                           
-                        <h3>Circuito:</h3>
-                        <div id="circuito" style="width: auto; background-color: #d7b01d"></div> 
-                      </div> 
-                      </div>
+               
            </section>
      <!-- CONTACT US
         ================-->
